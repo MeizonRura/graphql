@@ -1,29 +1,35 @@
 export const posts = [
   {
     id: "1",
-    title: "learn JS",
-    content: "js is awesome...",
+    title: "Cara Efektif Belajar Pemrograman",
+    content: "Belajar pemrograman butuh konsistensi dan latihan...",
     author: {
       id: "1",
-      name: "alexis",
+      name: "Ahmad Fadli",
+      nim: "202310001",
+      jurusan: "Teknik Informatika",
     },
   },
   {
     id: "2",
-    title: "Best alternative express js",
-    content: "express js is framework js...",
+    title: "Tips Menjadi Mahasiswa Berprestasi",
+    content: "Disiplin, aktif di kelas, dan ikut organisasi penting...",
     author: {
       id: "1",
-      name: "alexis",
+      name: "Ahmad Fadli",
+      nim: "202310001",
+      jurusan: "Teknik Informatika",
     },
   },
   {
     id: "3",
-    title: "Being a good developer",
-    content: "as developer, we know ....",
+    title: "Pengalaman Magang di Startup Teknologi",
+    content: "Selama magang, saya belajar kolaborasi dan agile...",
     author: {
       id: "2",
-      name: "lucy",
+      name: "Rina Kartika",
+      nim: "202310045",
+      jurusan: "Sistem Informasi",
     },
   },
 ]
@@ -31,10 +37,14 @@ export const posts = [
 export const authors = [
   {
     id: "1",
-    name: "alexis",
+    name: "Ahmad Fadli",
+    nim: "202310001",
+    jurusan: "Teknik Informatika",
   },
   {
     id: "2",
-    name: "lucy",
+    name: "Rina Kartika",
+    nim: "202310045",
+    jurusan: "Sistem Informasi",
   },
 ]

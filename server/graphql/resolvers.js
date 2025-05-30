@@ -1,4 +1,4 @@
-import { authors, posts } from "../db"
+import { authors, posts } from "../db.js"
 
 export const root = {
   posts() {
@@ -6,22 +6,28 @@ export const root = {
   },
   addPost({ inputPost }) {
     if (inputPost.title.length < 5) {
-      const err = Error("input Invalid")
+      const err = Error("Input tidak valid: Judul terlalu pendek.")
       err.status = 422
-
       throw err
     }
 
     const author = authors.find((author) => author.id === inputPost.authorId)
-    const count = posts.push({
-      id: +new Date(),
+
+    if (!author) {
+      const err = Error("Author tidak ditemukan")
+      err.status = 404
+      throw err
+    }
+
+    const newPost = {
+      id: Date.now().toString(),
       title: inputPost.title,
       content: inputPost.content,
-      author,
-    })
+      author, // sudah lengkap: id, name, nim, jurusan
+    }
 
-    const lastIndex = count - 1
+    posts.push(newPost)
 
-    return posts[lastIndex]
+    return newPost
   },
 }

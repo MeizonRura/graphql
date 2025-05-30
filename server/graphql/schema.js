@@ -20,12 +20,14 @@ const typeDefs = gql`
     id: ID!
     title: String!
     content: String!
-    author: Author!
+    author: Mahasiswa!
   }
 
-  type Author {
+  type Mahasiswa {
     id: ID!
     name: String!
+    nim: String!
+    jurusan: String!
   }
 `
 

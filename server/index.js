@@ -2,8 +2,8 @@ import cors from "cors"
 import express from "express"
 import { createHandler } from "graphql-http/lib/use/express"
 import { ruruHTML } from "ruru/server"
-import { root } from "./graphql/resolvers"
-import { schema } from "./graphql/schema"
+import { root } from "./graphql/resolvers.js"
+import { schema } from "./graphql/schema.js"
 
 const app = express()
 
